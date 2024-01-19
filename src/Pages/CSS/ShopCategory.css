@@ -1,0 +1,7 @@
+.shopcategory-products {
+  margin: 20px 170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px; /* Adjust the value based on your design */
+  row-gap: 100px;
+}
