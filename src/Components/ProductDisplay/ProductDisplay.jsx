@@ -1,10 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import DatePicker from "react-datepicker"; // Import DatePicker
+import "react-datepicker/dist/react-datepicker.css";
 import "./ProductDisplay.css";
 import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = (props) => {
   const { product } = props;
   const { addToCart } = useContext(ShopContext);
+  const [selectedDate, setSelectedDate] = useState(null);
+ 
+
+  const handleAddToCart = () => {
+    // Pass the selectedDate along with the product ID to addToCart function
+    addToCart(product.id, selectedDate);
+  };
 
   return (
     <div className="productdisplay">
@@ -29,13 +38,22 @@ const ProductDisplay = (props) => {
             <div>200 sqm</div>
           </div>
         </div>
-        <button
-          onClick={() => {
-            addToCart(product.id);
-          }}
-        >
-          ADD TO CART
-        </button>
+
+        <DatePicker
+          selected={selectedDate}
+          onChange={(date) => setSelectedDate(date)}
+          placeholderText="Choose a date"
+          dateFormat="MMMM d, yyyy"
+          isClearable
+          showMonthDropdown
+          showYearDropdown
+          dropdownMode="select"
+          popperClassName="custom-popper-class"
+          calendarClassName="custom-calendar-class"
+        />
+
+        {/* ADD TO CART button */}
+        <button onClick={handleAddToCart}>ADD TO CART</button>
       </div>
     </div>
   );
