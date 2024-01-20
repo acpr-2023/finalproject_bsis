@@ -8,7 +8,7 @@ const ShopCategory = (props) => {
   const { all_product, addToCart } = useContext(ShopContext);
 
   return (
-    <div className="shop-category">
+    <div className="service-display">
       <div className="shopcategory-products">
         {all_product.map((item, i) => {
           if (props.category === item.category) {

@@ -8,7 +8,7 @@ const getDefaultCart = () => {
   for (let index = 0; index < all_product.length + 1; index++) {
     cart[index] = {
       quantity: 0,
-      selectedDate: null, // Add selectedDate field
+      selectedDateTime: null,
     };
   }
   return cart;
@@ -17,12 +17,12 @@ const getDefaultCart = () => {
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
 
-  const addToCart = (itemId, selectedDate) => {
+  const addToCart = (itemId, selectedDateTime) => {
     setCartItems((prev) => ({
       ...prev,
       [itemId]: {
         quantity: prev[itemId].quantity + 1,
-        selectedDate,
+        selectedDateTime,
       },
     }));
     console.log(cartItems);
@@ -56,7 +56,7 @@ const ShopContextProvider = (props) => {
       ...prev,
       [itemId]: {
         quantity: prev[itemId].quantity - 1,
-        selectedDate: prev[itemId].selectedDate, // Preserve selected date
+        selectedDateTime: prev[itemId].selectedDateTime,
       },
     }));
   };
