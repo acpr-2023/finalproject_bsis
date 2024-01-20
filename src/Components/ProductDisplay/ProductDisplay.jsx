@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import DatePicker from "react-datepicker"; // Import DatePicker
+import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./ProductDisplay.css";
 import { ShopContext } from "../../Context/ShopContext";
@@ -7,12 +7,11 @@ import { ShopContext } from "../../Context/ShopContext";
 const ProductDisplay = (props) => {
   const { product } = props;
   const { addToCart } = useContext(ShopContext);
-  const [selectedDate, setSelectedDate] = useState(null);
- 
+  const [selectedDateTime, setSelectedDateTime] = useState(null);
 
   const handleAddToCart = () => {
-    // Pass the selectedDate along with the product ID to addToCart function
-    addToCart(product.id, selectedDate);
+    // Pass the selectedDateTime along with the product ID to addToCart function
+    addToCart(product.id, selectedDateTime);
   };
 
   return (
@@ -27,7 +26,7 @@ const ProductDisplay = (props) => {
 
         <div className="productdisplay-right-prices">
           <div className="productdisplay-right-price-new">
-            ₱{product.new_price}
+          ₱{product.new_price}
           </div>
         </div>
         <div className="productdisplay-right-description">description</div>
@@ -39,15 +38,16 @@ const ProductDisplay = (props) => {
           </div>
         </div>
 
+        {/* DatePicker with Time */}
         <DatePicker
-          selected={selectedDate}
-          onChange={(date) => setSelectedDate(date)}
-          placeholderText="Choose a date"
-          dateFormat="MMMM d, yyyy"
+          selected={selectedDateTime}
+          onChange={(date) => setSelectedDateTime(date)}
+          placeholderText="Choose date and time"
+          dateFormat="MMMM d, yyyy h:mm aa"
+          showTimeSelect
+          timeFormat="h:mm aa"
+          timeIntervals={15}
           isClearable
-          showMonthDropdown
-          showYearDropdown
-          dropdownMode="select"
           popperClassName="custom-popper-class"
           calendarClassName="custom-calendar-class"
         />
