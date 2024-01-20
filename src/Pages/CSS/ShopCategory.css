@@ -2,6 +2,23 @@
   margin: 20px 170px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px; /* Adjust the value based on your design */
+  column-gap: 20px; 
   row-gap: 100px;
+}
+
+.book-now-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4caf50; 
+  color: #ffffff; 
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+  background-color: #45a049; 
 }
