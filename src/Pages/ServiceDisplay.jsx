@@ -6,7 +6,7 @@ import "./CSS/ShopCategory.css";
 import Hero2 from "../Components/Hero2/Hero2";
 
 const ServiceDisplay = (props) => {
-  const { all_product, addToCart } = useContext(ShopContext);
+  const { all_product} = useContext(ShopContext);
 
   const filteredProducts = all_product.filter(
     (item) => props.category === item.category
