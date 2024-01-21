@@ -2,8 +2,14 @@
   margin: 20px 170px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 20px;
+  column-gap: 50px;
   row-gap: 100px;
+}
+
+.shopcategory-products img {
+  border: 4px solid #136581;
+  max-width: 100%;
+  height: auto;
 }
 
 /*.service-display {

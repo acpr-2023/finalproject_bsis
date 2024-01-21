@@ -10,6 +10,9 @@ import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Timeline from "./Components/About/Timeline";
 import Contact from "./Components/Contact/Contact";
+import TrainingInquire from "./Components/TrainingInquire/TrainingInquire";
+
+// import Trainings from "./Components/Trainings/Trainings";
 
 function App() {
   return (
@@ -20,15 +23,11 @@ function App() {
           <Route path="/" element={<Shop />} />
           <Route
             path="/services"
-            element={<ShopCategory category="services" />}
+            element={<ServiceDisplay category="services" />}
           />
           <Route
             path="/products"
             element={<ShopCategory category="products" />}
-          />
-          <Route
-            path="/trainings"
-            element={<ShopCategory category="trainings" />}
           />
           <Route
             path="/about"
@@ -42,6 +41,20 @@ function App() {
             }
           />
 
+          <Route
+            path="/services"
+            element={<ServiceDisplay category="services" />}
+          />
+          <Route
+            path="/products"
+            element={<ShopCategory category="products" />}
+          />
+          <Route
+            path="/trainings"
+            element={<ShopCategory category="trainings" />}
+          />
+          <Route path="/about" element={<ShopCategory category="about" />} />
+
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
@@ -52,5 +65,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
