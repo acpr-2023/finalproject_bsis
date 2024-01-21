@@ -10,6 +10,11 @@ const CartItems = () => {
   const [showCheckoutForm, setShowCheckoutForm] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
 
+  const handleCloseForms = () => {
+    setShowCheckoutForm(false);
+    setShowConfirmation(false);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowConfirmation(true);
@@ -120,7 +125,7 @@ const CartItems = () => {
             to your email. Please be reminded that your booking is subject to
             confirmation by our Client Management Team.
           </p>
-          <button onClick={() => setShowConfirmation(false)}>Close</button>
+          <button onClick={handleCloseForms}>Close</button>
         </div>
       )}
     </div>
