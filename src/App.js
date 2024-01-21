@@ -31,10 +31,6 @@ function App() {
             element={<ShopCategory category="products" />}
           />
           <Route
-            path="/trainings"
-            element={<ShopCategory category="trainings" />}
-          />
-          <Route
             path="/about"
             element={
               <React.Fragment>
@@ -45,7 +41,6 @@ function App() {
               </React.Fragment>
             }
           />
-
           <Route
             path="/services"
             element={<ServiceDisplay category="services" />}
@@ -77,8 +72,9 @@ function App() {
               </>
             }
           />
+          <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
 
-          <Route path="/about" element={<ShopCategory category="about" />} />
+
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
@@ -89,6 +85,5 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
 
 export default App;
