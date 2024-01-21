@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import Typed from 'typed.js';
+import Typed from 'typed.js'; 
 
 import './TrainingInquire.css';
 import headerClean from "../Assets/headerClean.jpg";
@@ -29,6 +27,7 @@ const TrainingInquire = () => {
       typed.destroy();
     };
   }, []);
+  
 
   const ImageText = ({ imageUrl, title, description, additionalDescription, buttonText, buttonLink }) => {
     const createMarkup = (htmlContent) => {
@@ -53,33 +52,11 @@ const TrainingInquire = () => {
   return (
     <main id="MainContent" className="content-for-layout focus-none" role="main" tabIndex="-1">
       <section>
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-        >
-          <SwiperSlide>
-            <img src={headerClean} alt="Slide 1" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={trainingHeader_2} alt="Slide 2" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={trainingHeader_3} alt="Slide 3" />
-          </SwiperSlide>
-        </Swiper>
-      </section>
-
-      <section>
         <h2 className="rich-text__heading" ref={typedTarget}>
           {/* Typed.js will insert text here */}
         </h2>
       </section>
-
+      
       <section>
         <div className="image-text-container">
             <ImageText 
