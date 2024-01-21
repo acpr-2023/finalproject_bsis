@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Shop from "./Pages/Shop";
 import ShopCategory from "./Pages/ShopCategory";
+import ServiceDisplay from "./Pages/ServiceDisplay";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer/Footer";
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
+
           <Route
             path="/services"
             element={<ShopCategory category="services" />}
@@ -40,6 +42,12 @@ function App() {
               </React.Fragment>
             }
           />
+
+          <Route path="/services" element={<ServiceDisplay category="services" />} />
+          <Route path="/products" element={<ShopCategory category="products" />} />
+          <Route path="/trainings" element={<ShopCategory category="trainings" />} />
+          <Route path="/about" element={<ShopCategory category="about" />} />
+          
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />

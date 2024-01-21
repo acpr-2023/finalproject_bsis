@@ -80,7 +80,7 @@ let all_product = [
   },
   {
     id: 10,
-    name: "products Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "products",
     image: p10_img,
     new_price: 85.0,
@@ -88,7 +88,7 @@ let all_product = [
   },
   {
     id: 11,
-    name: "products Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "products",
     image: p11_img,
     new_price: 85.0,
@@ -96,7 +96,23 @@ let all_product = [
   },
   {
     id: 12,
-    name: "products Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    category: "products",
+    image: p12_img,
+    new_price: 85.0,
+    old_price: 120.5,
+  },
+  {
+    id: 13,
+    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    category: "products",
+    image: p12_img,
+    new_price: 85.0,
+    old_price: 120.5,
+  },
+  {
+    id: 14,
+    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "products",
     image: p12_img,
     new_price: 85.0,
