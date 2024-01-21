@@ -1,110 +1,181 @@
-.cartitems{
-    margin: 100px 170px;
+.cartitems {
+  position: relative;
+  margin: 100px 170px;
 }
 
-.cartitems hr{
-    height: 3px;
-    background: #e2e2e2;
-    border: 0;
+.cartitems hr {
+  height: 3px;
+  background: #e2e2e2;
+  border: 0;
 }
 
-.cartitems-format-main{
-    display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
-    align-items: center;
-    gap: 75px;
-    padding: 20px 0px;
-    color: #454545;
-    font-size: 18px;
-    font-weight: 600;
+.cartitems-format-main {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 20px 0px;
+  color: #454545;
+  font-size: 18px;
+  font-weight: 600;
 }
 
-.cartitems-format{
-    font-size: 17px;
-    font-weight: 500;
+.cartitems-format {
+  font-size: 17px;
+  font-weight: 500;
 }
 
-.carticon-product-icon{
-    height: 62px;
+.carticon-product-icon {
+  height: 62px;
 }
 
-.cartitems-remove-icon{
-    width: 15px;
-    margin: 0px 40px;
-    cursor: pointer;
+.cartitems-remove-icon {
+  width: 15px;
+  margin: 0px 40px;
+  cursor: pointer;
 }
 
-.cartitems-quantity{
-    width: 64px;
-    height: 50px;
-    border: 2px solid #ebebeb;
-    background: #fff;
+.cartitems-quantity {
+  width: 64px;
+  height: 50px;
+  border: 2px solid #ebebeb;
+  background: #fff;
 }
 
-.cartitems-down{
-    display: flex;
-    margin: 100px 0px;
+.cartitems-down {
+  display: flex;
+  margin: 100px 0px;
 }
 
-.cartitems-total{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    margin-right: 200px;
-    gap: 40px;
-} 
-
-.cartitems-total-item{
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0px;
+.cartitems-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  gap: 40px;
 }
 
-.cartitems-total button{
-    width: 262px;
-    height: 58px;
-    outline: none;
-    border: none;
-    background:#ff5a5a;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
 }
 
-.cartitems-promocode{
-    flex: 1;
-    font-size: 16px;
-    font-weight: 500;
-    border: 2px solid red
+.cartitems-total button {
+  width: 262px;
+  height: 58px;
+  outline: none;
+  border: none;
+  background: #ff5a5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.cartitems-promocode p{
-    color: #555;
+.cartitems-promocode {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid red;
 }
 
-.cartitems-promobox{
-    width: 504px;
-    margin-top: 15px;
-    padding-left: 20px;
-    height: 58px;
-    background: #eae #eaeaea;
+.cartitems-promocode p {
+  color: #555;
 }
 
-.cartitems-promobox input{
-    border: none;
-    outline: none;
-    background: transparent;
-    font-size: 16px;
-    width: 330px;
-    height: 50px;
+.cartitems-promobox {
+  width: 504px;
+  margin-top: 15px;
+  padding-left: 20px;
+  height: 58px;
+  background: #eae #eaeaea;
 }
 
-.cartitems-promobox button{
-    width: 170px;
-    height: 58px;
-    font-size: 16px;
-    background: black;
-    color: white;
-    cursor: pointer;
+.cartitems-promobox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  width: 330px;
+  height: 50px;
+}
+
+.cartitems-promobox button {
+  width: 170px;
+  height: 58px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.checkout-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  height: 80%;
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout-field input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkout-field label {
+  margin-right: 10px; /* Add space between label and input */
+}
+
+.checkout-field input {
+  /* Add any additional styling for your inputs */
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.order-confirmation-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure the modal is above other elements */
+}
+
+/* Add this style to dim the background when the checkout form or modal is open */
+.cartitems::after {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Ensure the overlay is behind the form or modal */
+  display: none;
+}
+
+.show-checkout-form .cartitems::after,
+.show-confirmation .cartitems::after {
+  display: block;
 }
