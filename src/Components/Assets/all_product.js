@@ -93,37 +93,22 @@ let all_product = [
     id: 9,
     name: "LYSOL All Purpose Cleaner",
     category: "products",
-
     image: pr1_img,
     new_price: 380.95,
-
-    image: p9_img,
-    new_price: 85.0,
-
   },
   {
     id: 10,
     name: "3M Mop Easy Squeeze",
     category: "products",
-
     image: pr2_img,
     new_price: 245.0,
-
-    image: p10_img,
-    new_price: 85.0,
-
   },
   {
     id: 11,
     name: "ZIM Cleanser in Can",
     category: "products",
-
     image: pr3_img,
     new_price: 190.0,
-
-    image: p11_img,
-    new_price: 85.0,
-
   },
   {
     id: 12,
@@ -143,7 +128,6 @@ let all_product = [
     id: 14,
     name: "ZIM Glass Cleaner",
     category: "products",
-
     image: pr6_img,
     new_price: 164.0,
   },
@@ -160,10 +144,6 @@ let all_product = [
     category: "products",
     image: pr8_img,
     new_price: 370.9,
-
-    image: p12_img,
-    new_price: 85.0,
-
   },
 ];
 
