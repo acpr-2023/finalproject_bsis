@@ -1,18 +1,18 @@
 import React from "react";
 import "./Hero2.css";
-import hero_image from "../Assets/cleaning_fairy.png";
+import hero_image from "../Assets/heroservices.png";
 
-const Hero = () => {
+const Hero2 = () => {
   return (
-    <div className="hero">
-      <div className="hero-left">
+    <div className="hero2">
+      <div className="hero2-left">
         <h2>OUR SERVICES</h2>
       </div>
-      <div className="hero-right-image">
+      <div className="hero2-right-image">
         <img src={hero_image} alt="" />
       </div>
     </div>
   );
 };
 
-export default Hero;
+export default Hero2;
