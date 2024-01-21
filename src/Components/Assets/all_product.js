@@ -6,10 +6,14 @@ import p5_img from "./S5.png";
 import p6_img from "./S6.png";
 import p7_img from "./S7.png";
 import p8_img from "./S8.png";
-import p9_img from "./product_9.png";
-import p10_img from "./product_10.png";
-import p11_img from "./product_11.png";
-import p12_img from "./product_12.png";
+import pr1_img from "./p1.png";
+import pr2_img from "./p2.png";
+import pr3_img from "./p3.png";
+import pr4_img from "./p4.png";
+import pr5_img from "./p5.png";
+import pr6_img from "./p6.png";
+import pr7_img from "./p7.png";
+import pr8_img from "./p8.png";
 
 let all_product = [
   {
@@ -84,50 +88,62 @@ let all_product = [
     description:
       "Utilizes a Dry Steam cleaning device to naturally clean and disinfect hard surfaces without relying on chemicals. Eliminates undesired dust, stains, germs, bacteria, mildew, and mold from various surfaces such as tiles, grout, bath tubs, sink areas, shower enclosures, and fixtures.  ",
   },
-
+  //PRODUCTS//
   {
     id: 9,
-    name: "Deep Cleaning",
+    name: "LYSOL All Purpose Cleaner",
     category: "products",
-    image: p9_img,
-    new_price: 85.0,
+    image: pr1_img,
+    new_price: 380.95,
   },
   {
     id: 10,
-    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "3M Mop Easy Squeeze",
     category: "products",
-    image: p10_img,
-    new_price: 85.0,
+    image: pr2_img,
+    new_price: 245.0,
   },
   {
     id: 11,
-    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "ZIM Cleanser in Can",
     category: "products",
-    image: p11_img,
-    new_price: 85.0,
+    image: pr3_img,
+    new_price: 190.0,
   },
   {
     id: 12,
-    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "MEADOWS House Floor Cleanser",
     category: "products",
-    image: p12_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    image: pr4_img,
+    new_price: 540.0,
   },
   {
     id: 13,
-    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "SOLBAC Disinfectant Spray",
     category: "products",
-    image: p12_img,
-    new_price: 85.0,
-    old_price: 120.5,
+    image: pr5_img,
+    new_price: 195.0,
   },
   {
     id: 14,
-    name: "Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "ZIM Glass Cleaner",
     category: "products",
-    image: p12_img,
-    new_price: 85.0,
+    image: pr6_img,
+    new_price: 164.0,
+  },
+  {
+    id: 13,
+    name: "BAYGON Multi-insect Spray",
+    category: "products",
+    image: pr7_img,
+    new_price: 209.0,
+  },
+  {
+    id: 14,
+    name: "LYSOL Disinfectant Spray",
+    category: "products",
+    image: pr8_img,
+    new_price: 370.9,
   },
 ];
 
