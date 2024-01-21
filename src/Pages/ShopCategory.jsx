@@ -32,7 +32,10 @@ const ShopCategory = (props) => {
                   setSelectedItemId={handleItemClick}
                 />
                 {/* Add to Cart button for each item */}
-                <button onClick={() => handleAddToCart(item.id)}>
+                <button
+                  onClick={() => handleAddToCart(item.id)}
+                  className="add-to-cart-button"
+                >
                   ADD TO CART
                 </button>
               </div>
