@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Your other CSS rules follow here */
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -17,7 +16,7 @@ body {
 
 /* Main content styles */
 #MainContent {
-  background-color: #f4f4f4; 
+  background-color: #ffffff; 
   padding: 20px;
   font-family: "Poppins", sans-serif;
 }
@@ -45,6 +44,8 @@ section {
   color: #61dafb; 
   visibility: hidden;
 }
+
+
 
 
 /* ImageText component styles */
@@ -123,62 +124,6 @@ section {
 }
 
 
-/* Swiper container */
-.swiper {
-  width: 100%;
-  height: 1000px;
-  box-shadow: 0 6px 20px rgb(128, 168, 255); 
-}
-
-/* Swiper slide */
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Banner area styling */
-.banner-area {
-  text-align: center;
-  padding: 30px 0;
-  background: linear-gradient(145deg, #007bff, #0056b3); 
-  margin-top: 40px;
-  color: #fff;
-  border-radius: 15px; 
-  animation: colorShift 5s infinite alternate; 
-}
-
-.banner-area h2 {
-  margin-bottom: 15px;
-  font-size: 32px;
-}
-
-.banner-area h3 {
-  font-size: 24px;
-}
-
-/* Keyframes for the animation */
-@keyframes colorShift {
-  0% {
-    background: linear-gradient(145deg, #007bff, #0056b3);
-  }
-  100% {
-    background: linear-gradient(145deg, #009fff, #003f6b);
-  }
-}
 
 
-/* Style for multiple text if required */
-.multiple-text {
-  font-weight: bold;
-  color: #00bcd4; 
-}
+

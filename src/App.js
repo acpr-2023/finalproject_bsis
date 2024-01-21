@@ -12,8 +12,6 @@ import Timeline from "./Components/About/Timeline";
 import Contact from "./Components/Contact/Contact";
 import TrainingInquire from "./Components/TrainingInquire/TrainingInquire";
 
-// import Trainings from "./Components/Trainings/Trainings";
-
 function App() {
   return (
     <div>
@@ -24,7 +22,7 @@ function App() {
 
           <Route
             path="/services"
-            element={<ServiceDisplay category="services" />}
+            element={<ShopCategory category="services" />}
           />
           <Route
             path="/products"
@@ -41,37 +39,11 @@ function App() {
               </React.Fragment>
             }
           />
-          <Route
-            path="/services"
-            element={<ServiceDisplay category="services" />}
-          />
-          <Route
-            path="/products"
-            element={<ShopCategory category="products" />}
-          />
-          <Route
-            path="/trainings"
-            element={<ShopCategory category="trainings" />}
-          />
 
-          <Route
-            path="/services"
-            element={<ServiceDisplay category="services" />}
-          />
-          <Route
-            path="/products"
-            element={<ShopCategory category="products" />}
-          />
-
-          <Route
-            path="/trainings"
-            element={
-              <>
-                <ShopCategory category="trainings" />
-                <TrainingInquire />
-              </>
-            }
-          />
+          <Route path="/services" element={<ServiceDisplay category="services" />} />
+      
+          <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
+          
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
@@ -82,5 +54,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
+
 export default App;
