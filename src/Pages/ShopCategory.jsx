@@ -34,7 +34,7 @@ const ShopCategory = (props) => {
                   onClick={() => handleAddToCart(item.id)}
                   className="add-to-cart-button"
                 >
-                  ADD TO CART
+                  Add to Cart
                 </button>
               </div>
             );
