@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import hand_icon from "../Assets/hand_icon.png";
 import arrow_icon from "../Assets/arrow.png";
-import hero_image from "../Assets/hero_image.png";
+import hero_image from "../Assets/cleaning_fairyy_nbg.png";
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
         <p>out of your stress</p>
       </div>
       <div className="hero-latest-btn"></div>
-      <div className="here-right">
+      <div className="here-right-image">
         <img src={hero_image} alt="" />
       </div>
     </div>

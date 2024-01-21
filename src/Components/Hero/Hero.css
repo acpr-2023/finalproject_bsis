@@ -1,6 +1,7 @@
 .hero {
-  height: 100vh;
-  background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+  height: 70vh;
+  background: url("/src/Components/Assets/cleaning_bg.png") no-repeat center
+    center/cover;
   display: flex;
 }
 
@@ -15,12 +16,12 @@
 }
 
 .hero-left h2 {
-  color: #090909;
+  color: white;
   font-size: 30px;
   font-weight: 600;
 }
 .hero-left p {
-  color: #171717;
+  color: white;
   font-size: 80px;
   font-weight: 700;
 }
@@ -30,9 +31,11 @@
   align-items: center;
   gap: 20px;
 }
-.hero-right {
+.hero-right-image {
   flex: 1;
   display: flex;
+  padding-right: 50%;
   align-items: center;
   justify-content: center;
+  margin-right: 100%;
 }
