@@ -34,8 +34,6 @@
 .hero-right-image {
   flex: 1;
   display: flex;
-  padding-right: 50%;
   align-items: center;
   justify-content: center;
-  margin-right: 100%;
 }

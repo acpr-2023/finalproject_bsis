@@ -1,0 +1,41 @@
+.description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.5rem;
+  margin-left: 10%;
+}
+
+.text-desc {
+  width: 45%;
+  align-items: center;
+  font-size: 30px;
+  padding-top: 5%;
+}
+
+.text-desc h1 {
+  padding-bottom: 5%;
+}
+
+.text-desc p {
+  padding-bottom: 3rem;
+}
+
+.description_image {
+  width: 50%; /* Make the image responsive within its container */
+  border-radius: 20px; /* Add a smooth border-radius */
+}
+
+.click-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 50px;
+  font-size: 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.click-button:hover {
+  background-color: #0056b3;
+}
