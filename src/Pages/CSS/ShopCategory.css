@@ -26,3 +26,20 @@
 .book-now-button:hover {
   background-color: #45a049;
 }
+
+.add-to-cart-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #45a049;
+}
