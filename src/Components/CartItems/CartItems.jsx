@@ -12,8 +12,6 @@ const CartItems = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Gather form data
-    // Perform order submission logic
     setShowConfirmation(true);
   };
 
@@ -86,21 +84,20 @@ const CartItems = () => {
             PROCEED TO CHECKOUT
           </button>
         </div>
-        <div className="cartitems-promocode">{/* ... promo code ... */}</div>
       </div>
 
       {showCheckoutForm && (
         <form className="checkout-form" onSubmit={handleSubmit}>
           <div className="checkout-field">
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name" />
           </div>
           <div className="checkout-field">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">E-mail </label>
             <input type="email" id="email" placeholder="Enter your email" />
           </div>
           <div className="checkout-field">
-            <label htmlFor="email">Contact Number:</label>
+            <label htmlFor="email">Number</label>
             <input
               type="number"
               id="number"
@@ -108,7 +105,7 @@ const CartItems = () => {
             />
           </div>
           <div className="checkout-field">
-            <label htmlFor="email">Address:</label>
+            <label htmlFor="email">Address</label>
             <input type="text" id="address" placeholder="Enter your address" />
           </div>
           <button type="submit">Place Order</button>

@@ -20,9 +20,8 @@ h2 {
 
 .abt-desc img {
   width: 55%; /* Set the width of the image */
-  height: 350px; /* Maintain the aspect ratio */
+  height: 500px; /* Maintain the aspect ratio */
   border-radius: 20px;
-  box-shadow: 0 0 50px #136581; /* Equal box shadow on all sides */
   overflow: hidden;
   position: relative;
   margin-top: 30px;
@@ -84,7 +83,6 @@ h2 {
   width: 90%;
   height: 300px;
   border: 5px solid #136581; /* Add a border with color #136581 */
-  border-radius: 10px; /* Set a border-radius for rounded corners */
   margin-left: 10px;
 }
 

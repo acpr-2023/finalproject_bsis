@@ -13,7 +13,6 @@ const ShopCategory = (props) => {
 
   const handleAddToCart = (itemId) => {
     addToCart(itemId);
-    // Optionally, you can reset the selectedItemId after adding to the cart
     setSelectedItemId(null);
   };
 
@@ -31,7 +30,6 @@ const ShopCategory = (props) => {
                   new_price={item.new_price}
                   setSelectedItemId={handleItemClick}
                 />
-                {/* Add to Cart button for each item */}
                 <button
                   onClick={() => handleAddToCart(item.id)}
                   className="add-to-cart-button"
