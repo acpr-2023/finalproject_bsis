@@ -1,11 +1,14 @@
 import React from "react";
 import "./SGallery.css";
-import { Link } from 'react-router-dom';
-import gallery_image from "../Assets/gallery1.png";
-import gallery_image2 from "../Assets/gallery2.png";
-import gallery_image3 from "../Assets/gallery3.png";
+import { Link } from "react-router-dom";
+import gallery_image from "../Assets/servi1.png";
+import gallery_image2 from "../Assets/servi2.png";
+import gallery_image3 from "../Assets/servi3.png";
+import gallery_image4 from "../Assets/servi4.png";
+import gallery_image5 from "../Assets/servi5.png";
+import gallery_image6 from "../Assets/servi6.png";
 
-const Gallery = () => {
+const SGallery = () => {
   return (
     <div class="project">
       <h1>Our Services</h1>
@@ -15,84 +18,84 @@ const Gallery = () => {
           <div className="gallery_image">
             <img src={gallery_image} alt="" />
           </div>
-          <h3>Deep Living Room Cleaning</h3>
+          <h3>Deep Cleaning</h3>
           <p>
-            Always best after deep cleaning service to complete the whole
-            process 360 degrees cleaning...
+            Thorough cleaning, targeting overlooked areas, for a refreshed,
+            sanitized environment.
           </p>
-          <a href="#" class="btn">
-            To Look Forward
-          </a>
+          <Link to="/services" class="btn">
+            Look More...
+          </Link>
         </div>
 
         <div className="project-box">
           <div className="gallery_image2">
             <img src={gallery_image2} alt="" />
           </div>
-          <h3>Deep Living Room Cleaning</h3>
+          <h3>Post Construction Cleaning</h3>
           <p>
-            Always best after deep cleaning service to complete the whole
-            process 360 degrees cleaning...
+            Specialized cleaning after construction, ensuring a spotless, safe,
+            and organized space.
           </p>
-          <a href="#" class="btn">
-            To Look Forward
-          </a>
+          <Link to="/services" class="btn">
+            Look More...
+          </Link>
         </div>
 
         <div className="project-box">
           <div className="gallery_image3">
             <img src={gallery_image3} alt="" />
           </div>
-          <h3>Deep Bathroom Cleaning</h3>
+          <h3>Move-in, Move-out Cleaning</h3>
           <p>
-            Always best after deep cleaning service to complete the whole
-            process 360 degrees cleaning...
+            Efficient cleaning for smooth transitions, leaving spaces pristine
+            and refreshed.
           </p>
-          <a href="#" className="btn">
-            To Look Forward
-          </a>
+          <Link to="/services" class="btn">
+            Look More...
+          </Link>
         </div>
 
         <div className="project-box">
           <div className="gallery_image">
-            <img src={gallery_image} alt="" />
+            <img src={gallery_image4} alt="" />
           </div>
-          <h3>Deep Living Room Cleaning</h3>
+          <h3>Disinfection Fogging</h3>
           <p>
-            Always best after deep cleaning service to complete the whole
-            process 360 degrees cleaning...
+            Advanced fogging technique for comprehensive disinfection, ensuring
+            a germ-free environment.
           </p>
-          <a href="#" class="btn">
-            To Look Forward
-          </a>
+          <Link to="/services" class="btn">
+            Look More...
+          </Link>
         </div>
 
         <div className="project-box">
           <div className="gallery_image2">
-            <img src={gallery_image2} alt="" />
+            <img src={gallery_image5} alt="" />
           </div>
-          <h3>Deep Living Room Cleaning</h3>
+          <h3>Subscription Cleaning</h3>
           <p>
-            Always best after deep cleaning service to complete the whole
-            process 360 degrees cleaning...
+            Regular cleaning services on a subscription basis for consistent
+            home maintenance.
           </p>
-          <a href="#" class="btn">
-            To Look Forward
-          </a>
+          <Link to="/services" class="btn">
+            Look More...
+          </Link>
         </div>
 
         <div className="project-box">
           <div className="gallery_image3">
-            <img src={gallery_image3} alt="" />
+            <img src={gallery_image6} alt="" />
           </div>
-          <h3>Deep Bathroom Cleaning</h3>
+          <h3>Office Cleaning Service</h3>
           <p>
-            Always best after deep cleaning service to complete the whole
-            process 360 degrees cleaning...
+            Professional office cleaning for a pristine, organized, and
+            productive workspace environment.
           </p>
-          <a href="#" className="btn">
-            To Look Forward
-          </a>
+          <Link to="/services" class="btn">
+            Look More...
+          </Link>
         </div>
 
         <div className="more-projects-button">
@@ -105,4 +108,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default SGallery;
