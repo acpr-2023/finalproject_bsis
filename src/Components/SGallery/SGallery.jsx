@@ -1,5 +1,6 @@
 import React from "react";
 import "./SGallery.css";
+import { Link } from 'react-router-dom';
 import gallery_image from "../Assets/gallery1.png";
 import gallery_image2 from "../Assets/gallery2.png";
 import gallery_image3 from "../Assets/gallery3.png";
@@ -20,7 +21,7 @@ const Gallery = () => {
             process 360 degrees cleaning...
           </p>
           <a href="#" class="btn">
-            Book Now
+            To Look Forward
           </a>
         </div>
 
@@ -34,7 +35,7 @@ const Gallery = () => {
             process 360 degrees cleaning...
           </p>
           <a href="#" class="btn">
-            Book Now
+            To Look Forward
           </a>
         </div>
 
@@ -48,7 +49,7 @@ const Gallery = () => {
             process 360 degrees cleaning...
           </p>
           <a href="#" className="btn">
-            Book Now
+            To Look Forward
           </a>
         </div>
 
@@ -62,7 +63,7 @@ const Gallery = () => {
             process 360 degrees cleaning...
           </p>
           <a href="#" class="btn">
-            Book Now
+            To Look Forward
           </a>
         </div>
 
@@ -76,7 +77,7 @@ const Gallery = () => {
             process 360 degrees cleaning...
           </p>
           <a href="#" class="btn">
-            Book Now
+            To Look Forward
           </a>
         </div>
 
@@ -90,14 +91,14 @@ const Gallery = () => {
             process 360 degrees cleaning...
           </p>
           <a href="#" className="btn">
-            Book Now
+            To Look Forward
           </a>
         </div>
 
         <div className="more-projects-button">
-          <a href="#" className="btn">
+          <Link to="/services" className="btn">
             More Services - Click Here
-          </a>
+          </Link>
         </div>
       </div>
     </div>

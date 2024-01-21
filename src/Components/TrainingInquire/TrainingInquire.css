@@ -45,9 +45,6 @@ section {
   visibility: hidden;
 }
 
-
-
-
 /* ImageText component styles */
 .image-text-container {
   display: grid;
@@ -69,7 +66,7 @@ section {
 }
 
 .image-text:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
+  transform: translateY(-5px); 
 }
 
 .image-text img {

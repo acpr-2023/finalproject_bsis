@@ -21,6 +21,7 @@
 .newsletter p {
   color: #454545;
   font-size: 20px;
+  margin-bottom: 1.5rem; /* Add margin for spacing */
 }
 
 .newsletter div {
@@ -28,28 +29,61 @@
   align-items: center;
   justify-content: space-between;
   background: white;
+  width: 100%; /* Make it full width */
   width: 730px;
-  height: 30px;
+  height: 40px;
+  margin: auto; /* Center the div */
   border-radius: 80px;
   border: 1px solid #e3e3e3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow to input area */
 }
 
 .newsletter input {
   width: 500px;
-  margin-left: 30px;
-  border: none;
+  margin-left: 20 px;
+  border: 0.3rem solid #156789; /* Increased border size */
   outline: none;
   color: #616161;
   font-family: Poppins;
   font-size: 16px;
+  padding: 0.5rem; /* Add padding for better text spacing */
+  transition: border-color 0.3s ease; /* Smooth transition for focus */
+}
+
+.newsletter input:focus {
+  border-color: #0f4c75; /* Change border color on focus for better visibility */
 }
 
 .newsletter div button {
-  width: 210px;
-  height: 70px;
-  border-radius: 80px;
-  background: black;
+  width: 150px; /* Adjust button width */
+  height: 100%; /* Make the button height equal to the input field */
+  border-radius: 25px;
+  background: #156789; /* Adjust to theme color */
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
+  border: none; /* Remove border */
   cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.newsletter div button:hover {
+  background: #0f4c75; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .newsletter {
+    padding: 1rem;
+  }
+
+  .newsletter div {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .newsletter input,
+  .newsletter div button {
+    width: 80%;
+    margin: 10px auto; /* Center in the div */
+  }
 }

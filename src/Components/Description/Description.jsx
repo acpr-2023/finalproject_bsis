@@ -1,8 +1,15 @@
-import React from "react";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./Description.css";
 import description_image from "../Assets/service_img.jpg";
 
 const Description = () => {
+  const navigate = useNavigate();
+
+  const handleReadMoreClick = () => {
+    navigate('/about');
+  };
+
   return (
     <div className="description">
       <div className="text-desc">
@@ -13,7 +20,9 @@ const Description = () => {
           to simplify people's lives, giving you the freedom to focus on what
           truly matters to you.
         </p>
-        <button className="click-button">Read More...</button>
+        <button className="click-button" onClick={handleReadMoreClick}>
+          Read More...
+        </button>
       </div>
       <div className="description_image">
         <img src={description_image} alt="" />

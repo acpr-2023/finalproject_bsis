@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  height: 70vh;
   background: url("/src/Components/Assets/materials.png") no-repeat center
     center/cover;
   display: flex;
@@ -32,20 +32,13 @@
   align-items: center;
   gap: 20px;
 }
-/* .hero-right-image {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-} */
 
 .hero-right-image {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: left;
-  width: 50%; /* Adjust the width to make the image larger */
+  width: 50%;
 }
 
 .hero-right-image img {
@@ -67,5 +60,6 @@
 }
 
 .contact-button:hover {
-  background-color: #0056b3;
+  background-color: #61dafb;
+  color: white;
 }

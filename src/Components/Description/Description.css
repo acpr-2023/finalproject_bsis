@@ -23,8 +23,8 @@
 
 .description_image {
   width: 50%; /* Make the image responsive within its container */
-  border-radius: 20px; /* Add a smooth border-radius */
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  border-radius: 20px;
+  margin-right: -50px;
 }
 
 .click-button {

@@ -3,32 +3,62 @@
   margin-top: 3%;
   padding: 10%;
 }
+
 .project h1 {
   color: #616161;
-  font-size: 30px;
+  font-size: 2.5vw;
+  margin-left: 35px;
 }
+
+.project h2 {
+  margin-bottom: 3rem;
+  color: #156789;
+  font-size: 3.5vw;
+  font-weight: 800;
+  margin-right: 570px;
+}
+
 .project h3 {
   color: white;
   font-size: 30px;
 }
-.project h2 {
-  margin-bottom: 3rem;
-  color: #156789;
-  font-size: 60px;
-  font-weight: 800;
-}
+
 .project-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 1.1rem; 
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  color: white;
+  margin: auto;
 }
 
-.project-container:hover {
-  transform: scale(1.05); /* Zoom in when the container is hovered */
+@media screen and (max-width: 768px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr); 
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .project h1 {
+    font-size: 18px; 
+  }
+
+  .project h2 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-container {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+
+
+.project-container:hover {
+  transform: scale(1.05); 
+}
+
 .project-container .project-box {
   flex: 1 1 20rem;
   background: #156789;
@@ -43,32 +73,30 @@
   border-color: #156789;
   transform: scale(1.02);
 }
+
 .project-box i {
   font-size: 7rem;
   color: #156789;
 }
+
 .project-box h3 {
   font-size: 2rem;
 }
+
 .project-box p {
   font-size: 1.3rem;
   margin: 1rem 0 3rem;
 }
-/* .gallery_image {
-  border-radius: 2rem;
-  width: 10%;
-  height: 10%;
-} */
 
 .gallery_image {
-  max-width: 100%; /* Set the maximum width of the gallery_image */
-  margin-bottom: 1.5rem; /* Add some margin to separate the image from other content */
+  max-width: 100%; 
+  margin-bottom: 1.5rem; 
 }
 
 .project-container .project-box img {
-  width: 100%; /* Make the image fill its container */
-  border-radius: 10px; /* Add a smooth border-radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+  width: 100%; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .btn {
@@ -92,13 +120,14 @@
 .more-projects-button {
   text-align: right;
   margin-top: 2rem;
+  margin-right: 100px;
 }
 
 .more-projects-button a {
   background-color: white;
   color: #156789;
   padding: 10px 20px;
-  font-size: 20px;
+  font-size: 22px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
