@@ -2,8 +2,6 @@ import React from "react";
 import "./Item.css";
 
 const Item = ({ id, name, image, new_price }) => {
-  // No handleClick function
-
   return (
     <div className="item">
       <img src={image} alt="" />
