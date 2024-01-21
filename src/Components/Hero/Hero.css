@@ -1,6 +1,6 @@
 .hero {
   height: 70vh;
-  background: url("/src/Components/Assets/cleaning_bg.png") no-repeat center
+  background: url("/src/Components/Assets/materials.png") no-repeat center
     center/cover;
   display: flex;
 }
@@ -19,10 +19,11 @@
   color: white;
   font-size: 30px;
   font-weight: 600;
+  padding-bottom: 3%;
 }
 .hero-left p {
   color: white;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 700;
 }
 
@@ -31,9 +32,40 @@
   align-items: center;
   gap: 20px;
 }
-.hero-right-image {
+/* .hero-right-image {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 50%;
+} */
+
+.hero-right-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 50%; /* Adjust the width to make the image larger */
+}
+
+.hero-right-image img {
+  width: 70%; /* Make the image fill its container */
+  max-width: 100%; /* Ensure the image does not exceed its original size */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 10px; /* Add a smooth border-radius if desired */
+}
+
+.contact-button {
+  background-color: white;
+  color: #156789;
+  padding: 15px 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 4rem;
+  margin-top: 1rem; /* Adjust the margin as needed */
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
 }
