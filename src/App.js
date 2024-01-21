@@ -12,8 +12,6 @@ import Timeline from "./Components/About/Timeline";
 import Contact from "./Components/Contact/Contact";
 import TrainingInquire from "./Components/TrainingInquire/TrainingInquire";
 
-// import Trainings from "./Components/Trainings/Trainings";
-
 function App() {
   return (
     <div>
@@ -45,6 +43,22 @@ function App() {
               </React.Fragment>
             }
           />
+
+          <Route
+            path="/trainings"
+            element={
+              <>
+                <ShopCategory category="trainings" />
+                <TrainingInquire />
+              </>
+            }
+          />
+
+          <Route
+            path="/services"
+            element={<ServiceDisplay category="services" />}
+          />
+
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
@@ -55,6 +69,7 @@ function App() {
     </div>
   );
 }
+
 
 
   export default App;

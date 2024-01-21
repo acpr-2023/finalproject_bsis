@@ -1,5 +1,5 @@
 import React from "react";
-import grpphoto from "../Assets/grpp_photo.jpg";
+import grpphoto from "../Assets/grpphoto.jpg";
 import "./About.css";
 import "./Timeline.jsx";
 import "../Contact/Contact.jsx";

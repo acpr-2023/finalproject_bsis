@@ -1,8 +1,5 @@
-/* About.css */
-
-/* Heading styling */
 h2 {
-  color: #136581; /* Google Blue */
+  color: #136581;
   font-size: 3em;
   text-align: center;
   margin-bottom: 20px;
@@ -11,24 +8,22 @@ h2 {
 
 .abt-desc {
   position: relative;
-  text-align: center; /* Center the content horizontally */
+  text-align: center;
 }
 .abt-desc2 {
   position: relative;
-  text-align: center; /* Center the content horizontally */
+  text-align: center;
 }
 
 .abt-desc img {
-  width: 55%; /* Set the width of the image */
-  height: 350px; /* Maintain the aspect ratio */
-  border-radius: 20px;
-  box-shadow: 0 0 50px #136581; /* Equal box shadow on all sides */
+  width: 55%;
+  height: 500px;
+  border: 5px solid #136581;
   overflow: hidden;
   position: relative;
   margin-top: 30px;
 }
 
-/* Paragraph styling */
 .abt-desc2 p {
   font-size: 1em;
   color: #363535;
@@ -53,8 +48,8 @@ h2 {
 .abt-goals {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-  gap: 10px; /* Adjust the gap between grid items */
-  align-items: center; /* Center items vertically */
+  gap: 10px;
+  align-items: center;
 }
 
 .abt-goals p {
@@ -77,18 +72,16 @@ h2 {
 
 .timeline-image {
   flex: 1;
-  position: relative; /* Add position relative to position the image inside */
+  position: relative;
 }
 
 .timeline-image img {
-  width: 90%;
-  height: 300px;
-  border: 5px solid #136581; /* Add a border with color #136581 */
-  border-radius: 10px; /* Set a border-radius for rounded corners */
+  width: 95%;
+  height: 350px;
+  border: 5px solid #136581;
   margin-left: 10px;
 }
 
-/* Common styles for both timelines */
 .timeline-text {
   flex: 1;
   padding: 0 20px;
@@ -101,7 +94,6 @@ h2 {
   line-height: 1.6;
 }
 
-/* Styles for the first timeline (timelineData) */
 .timeline1 {
   color: #363535;
   font-weight: bolder;
@@ -109,12 +101,8 @@ h2 {
   margin-top: 20px;
 }
 
-/* Styles for the second timeline (timelineData2) */
 .timeline2 {
-  color: #363535; /* Change this to the desired color for the second timeline */
-  font-weight: bold; /* Change this to the desired font-weight for the second timeline */
-  font-size: 1em;
+  color: #363535;
+  font-weight: bold;
   margin-top: 20px;
 }
-
-/* contact */
