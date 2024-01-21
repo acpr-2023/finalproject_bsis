@@ -1,10 +1,11 @@
+// ServiceDisplay.jsx
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
+import "./CSS/ShopCategory.css";
 
-const ShopCategory = (props) => {
+const ServiceDisplay = (props) => {
   const { all_product, addToCart } = useContext(ShopContext);
 
   return (
@@ -14,12 +15,14 @@ const ShopCategory = (props) => {
           if (props.category === item.category) {
             return (
               <div key={i} className="item-container">
-                <Item
-                  id={item.id}
-                  name={item.name}
-                  image={item.image}
-                  new_price={item.new_price}
-                />
+                <div>
+                  <Item
+                    id={item.id}
+                    name={item.name}
+                    image={item.image}
+                    new_price={item.new_price}
+                  />
+                </div>
                 <Link to={`/product/${item.id}`} className="book-now-button">
                   Book Now
                 </Link>
@@ -34,4 +37,4 @@ const ShopCategory = (props) => {
   );
 };
 
-export default ShopCategory;
+export default ServiceDisplay;

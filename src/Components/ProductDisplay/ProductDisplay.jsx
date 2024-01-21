@@ -26,15 +26,21 @@ const ProductDisplay = (props) => {
 
         <div className="productdisplay-right-prices">
           <div className="productdisplay-right-price-new">
-          ₱{product.new_price}
+            ₱{product.new_price}
           </div>
         </div>
-        <div className="productdisplay-right-description">description</div>
+        <div className="productdisplay-right-description">
+          {product.description}
+        </div>
         <div className="productdisplay-right-size">
-          <h1>Select Size</h1>
+          <h1>BOOK NOW</h1>
           <div className="productdisplay-right-size">
-            <div>100 sqm</div>
-            <div>200 sqm</div>
+            <div>
+              {" "}
+              * Please note that this is a tentative booking schedule and is
+              still subject to confirmation by our Client Management Team.
+            </div>
+            <div></div>
           </div>
         </div>
 
