@@ -45,13 +45,6 @@ function App() {
               </React.Fragment>
             }
           />
-Temporary merge branch 1
-      
-
-
-
-
-
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
           </Route>
@@ -61,6 +54,8 @@ Temporary merge branch 1
       </BrowserRouter>
     </div>
   );
+}
 
 
-export default App;
+  export default App;
+        
