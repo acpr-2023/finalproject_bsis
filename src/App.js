@@ -8,7 +8,7 @@ import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer/Footer";
 import About from "./Components/About/About";
 import Timeline from "./Components/About/Timeline";
-// import Contact from "./Components/About/Contact";
+import Contact from "./Components/About/Contact";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
                 <ShopCategory category="about" />
                 <About />
                 <Timeline />
-                {/* <Contact /> */}
+                <Contact />
               </React.Fragment>
             }
           />

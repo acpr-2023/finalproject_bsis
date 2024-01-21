@@ -2,7 +2,7 @@ import React from "react";
 import grpphoto from "../Assets/grpp_photo.jpg";
 import "./About.css";
 import "./Timeline.jsx";
-import "./Contact.js";
+import "./Contact.jsx";
 
 const About = () => {
   return (
