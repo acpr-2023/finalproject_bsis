@@ -25,21 +25,21 @@
 
 .project-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 1.1rem; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
   justify-content: center;
   margin: auto;
 }
 
 @media screen and (max-width: 768px) {
   .project-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 600px) {
   .project h1 {
-    font-size: 18px; 
+    font-size: 18px;
   }
 
   .project h2 {
@@ -51,12 +51,6 @@
   .project-container {
     grid-template-columns: 1fr; /* 1 column on very small screens */
   }
-}
-
-
-
-.project-container:hover {
-  transform: scale(1.05); 
 }
 
 .project-container .project-box {
@@ -89,14 +83,14 @@
 }
 
 .gallery_image {
-  max-width: 100%; 
-  margin-bottom: 1.5rem; 
+  max-width: 100%;
+  margin-bottom: 1.5rem;
 }
 
 .project-container .project-box img {
-  width: 100%; 
+  width: 100%;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn {

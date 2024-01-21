@@ -1,13 +1,13 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './Hero.css';
-import hero_image from '../Assets/cleaning_fairy.png';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./Hero.css";
+import hero_image from "../Assets/cleaning_fairy.png";
 
 const Hero = () => {
   const navigate = useNavigate();
 
   const handleContactClick = () => {
-    navigate('/about'); // Navigates to the About page
+    navigate("/about"); // Navigates to the About page
   };
 
   return (
