@@ -7,6 +7,10 @@ import ServiceDisplay from "./Pages/ServiceDisplay";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import Footer from "./Components/Footer/Footer";
+import React from "react";
+import TrainingInquire from "./Components/TrainingInquire/TrainingInquire";
+
+// import Trainings from "./Components/Trainings/Trainings";
 
 function App() {
   return (
@@ -17,7 +21,9 @@ function App() {
           <Route path="/" element={<Shop />} />
           <Route path="/services" element={<ServiceDisplay category="services" />} />
           <Route path="/products" element={<ShopCategory category="products" />} />
-          <Route path="/trainings" element={<ShopCategory category="trainings" />} />
+      
+          <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
+
           <Route path="/about" element={<ShopCategory category="about" />} />
           
 
@@ -32,6 +38,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+  };
 
 export default App;
