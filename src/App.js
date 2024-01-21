@@ -24,7 +24,7 @@ function App() {
 
           <Route
             path="/services"
-            element={<ShopCategory category="services" />}
+            element={<ServiceDisplay category="services" />}
           />
           <Route
             path="/products"
@@ -72,9 +72,6 @@ function App() {
               </>
             }
           />
-          <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
-
-
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
@@ -85,5 +82,5 @@ function App() {
       </BrowserRouter>
     </div>
   );
-
+}
 export default App;
