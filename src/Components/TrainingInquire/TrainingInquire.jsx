@@ -2,9 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js'; 
 
 import './TrainingInquire.css';
-import headerClean from "../Assets/headerClean.jpg";
-import trainingHeader_2 from "../Assets/CleaningService.png";
-import trainingHeader_3 from "../Assets/CleaningService_2.png";
 import basicCleaning from "../Assets/basiccleaning.jpg";
 import trainers from "../Assets/trainingheader.jpg";
 import green from "../Assets/green.jpg";
