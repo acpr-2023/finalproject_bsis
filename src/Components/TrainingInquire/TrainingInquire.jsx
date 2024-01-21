@@ -44,7 +44,6 @@ const TrainingInquire = () => {
     const createMarkup = (htmlContent) => {
       return { __html: htmlContent };
     };
-
     return (
       <div className="image-text">
         <img src={imageUrl} alt={title} />
