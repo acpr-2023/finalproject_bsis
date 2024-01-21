@@ -73,43 +73,6 @@
   cursor: pointer;
 }
 
-.cartitems-promocode {
-  flex: 1;
-  font-size: 16px;
-  font-weight: 500;
-  border: 2px solid red;
-}
-
-.cartitems-promocode p {
-  color: #555;
-}
-
-.cartitems-promobox {
-  width: 504px;
-  margin-top: 15px;
-  padding-left: 20px;
-  height: 58px;
-  background: #eae #eaeaea;
-}
-
-.cartitems-promobox input {
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 16px;
-  width: 330px;
-  height: 50px;
-}
-
-.cartitems-promobox button {
-  width: 170px;
-  height: 58px;
-  font-size: 16px;
-  background: black;
-  color: white;
-  cursor: pointer;
-}
-
 .checkout-form {
   position: absolute;
   top: 50%;
@@ -117,10 +80,10 @@
   transform: translate(-50%, -50%);
   background-color: #fff;
   height: 80%;
-  width: 50%;
+  width: 40%;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgb(58, 63, 94);
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -129,40 +92,57 @@
 }
 
 .checkout-field input {
-  width: 100%;
-  padding: 10px;
+  width: 400px;
+  padding: 20px;
   margin: 5px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #000000;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
 .checkout-field label {
-  margin-right: 10px; /* Add space between label and input */
-}
-
-.checkout-field input {
-  /* Add any additional styling for your inputs */
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+  margin-right: 10px;
 }
 
 .order-confirmation-modal {
   position: absolute;
+  height: 80%;
+  width: 40%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 2; /* Ensure the modal is above other elements */
+  box-shadow: 0 0 30px rgb(58, 63, 94);
+  z-index: 2;
 }
 
-/* Add this style to dim the background when the checkout form or modal is open */
+.order-confirmation-modal p {
+  justify-content: center;
+  align-items: center;
+  display: contents;
+  height: 80%;
+  width: 40%;
+  padding: 50px;
+}
+
+.checkout-form button,
+.order-confirmation-modal button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 262px;
+  height: 58px;
+  outline: none;
+  border: none;
+  background: rgb(255, 255, 255);
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .cartitems::after {
   content: "";
   position: fixed;
@@ -171,7 +151,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1; /* Ensure the overlay is behind the form or modal */
+  z-index: 1;
   display: none;
 }
 
