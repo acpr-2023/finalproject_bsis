@@ -41,7 +41,37 @@ function App() {
               </React.Fragment>
             }
           />
-      
+          <Route
+            path="/services"
+            element={<ServiceDisplay category="services" />}
+          />
+          <Route
+            path="/products"
+            element={<ShopCategory category="products" />}
+          />
+          <Route
+            path="/trainings"
+            element={<ShopCategory category="trainings" />}
+          />
+
+          <Route
+            path="/services"
+            element={<ServiceDisplay category="services" />}
+          />
+          <Route
+            path="/products"
+            element={<ShopCategory category="products" />}
+          />
+
+          <Route
+            path="/trainings"
+            element={
+              <>
+                <ShopCategory category="trainings" />
+                <TrainingInquire />
+              </>
+            }
+          />
           <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
 
 
@@ -55,6 +85,5 @@ function App() {
       </BrowserRouter>
     </div>
   );
-};
 
 export default App;
