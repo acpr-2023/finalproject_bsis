@@ -41,12 +41,10 @@ function App() {
               </React.Fragment>
             }
           />
-
-          <Route path="/services" element={<ServiceDisplay category="services" />} />
-          <Route path="/products" element={<ShopCategory category="products" />} />
       
           <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
-          
+
+
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
