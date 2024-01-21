@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
@@ -6,6 +6,16 @@ import remove_icon from "../Assets/cart_cross_icon.png";
 const CartItems = () => {
   const { all_product, cartItems, removeFromCart, getTotalCartAmount } =
     useContext(ShopContext);
+
+  const [showCheckoutForm, setShowCheckoutForm] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Gather form data
+    // Perform order submission logic
+    setShowConfirmation(true);
+  };
 
   return (
     <div className="cartitems">
@@ -72,16 +82,38 @@ const CartItems = () => {
               <h3>₱{getTotalCartAmount()}</h3>
             </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <button onClick={() => setShowCheckoutForm(true)}>
+            PROCEED TO CHECKOUT
+          </button>
         </div>
-        <div className="cartitems-promocode">
-          <p>If you have a promo code, Enter it here</p>
-          <div className="cartitems-promobox">
-            <input type="text" placeholder="promo code" />
-            <button>Submit</button>
-          </div>
-        </div>
+        <div className="cartitems-promocode">{/* ... promo code ... */}</div>
       </div>
+
+      {showCheckoutForm && (
+        <form className="checkout-form" onSubmit={handleSubmit}>
+          <div className="checkout-field">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+          <div className="checkout-field">
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+          {/* Add more fields as needed */}
+          <button type="submit">Place Order</button>
+        </form>
+      )}
+
+      {showConfirmation && (
+        <div className="order-confirmation-modal">
+          <h2>Order Confirmed!</h2>
+          <p>
+            Thank you for your order! Your confirmation details have been sent
+            to your email.
+          </p>
+          <button onClick={() => setShowConfirmation(false)}>Close</button>
+        </div>
+      )}
     </div>
   );
 };
