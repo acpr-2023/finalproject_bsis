@@ -77,9 +77,8 @@ section {
   max-height: 350px;
   width: auto;
   height: auto;
-  border-radius: 12px;
   margin-bottom: 25px;
-  box-shadow: 0 0 1rem #6696f0;
+  border: 0.2rem solid #156789;
   overflow: hidden;
   transition: .5s ease;
 }
