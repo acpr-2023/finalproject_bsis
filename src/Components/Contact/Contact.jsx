@@ -1,22 +1,31 @@
 import React from "react";
-import "./About/Contact.css";
+import "./Contact.css";
 
 const Contact = () => {
   const sendEmail = () => {
-    window.Email.send({
+    const fullName = document.getElementById("name").value;
+    const emailAddress = document.getElementById("email").value;
+    const phoneNumber = document.getElementById("phone").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    const emailData = {
       Host: "smtp.elasticemail.com",
       Username: "taracaguiat456@gmail.com",
       Password: "483DE6F1CD138B227A481E6F5DB06AF4799E",
       To: "taracaguiat456@gmail.com",
       From: "taracaguiat456@gmail.com",
-      Subject: "This is the subject",
-      Body: "And this is the body",
-    }).then((message) => alert(message));
+      Subject: subject,
+      Body: `Full Name: ${fullName}\n\nEmail Address: ${emailAddress}\n\nPhone Number: ${phoneNumber}\n\nMessage: ${message}`,
+    };
+
+    window.Email.send(emailData).then((message) => alert(message));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     sendEmail();
+    e.target.reset();
   };
 
   return (
@@ -25,7 +34,7 @@ const Contact = () => {
         Contact Us <span>📬</span>
       </h2>
       <form onSubmit={handleSubmit}>
-        <div className="input-box">
+        <div className="input-box1">
           <div className="input-field field">
             <input
               type="text"
@@ -38,7 +47,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="input-box">
+        <div className="input-box2">
           <div className="input-field field">
             <input
               type="text"

@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: white;
+}
+
+.contact {
+  text-align: center; /* Center text in the contact container */
+}
+
+.contact h2 {
+  font-size: 40px;
+  color: #136581;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.contact form {
+  width: 80%; /* Adjust the form width as a percentage */
+  max-width: 600px; /* Add a maximum width for larger screens */
+  margin: 20px auto; /* Center the form on the page */
+  display: flex; /* Make the form a flex container */
+  flex-direction: column; /* Stack items vertically */
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-container > .input-box:nth-child(1),
+.form-container > .input-box:nth-child(2) {
+  /* Target the first two input boxes */
+  margin-bottom: 0; /* Remove bottom margin for inline arrangement */
+}
+
+.input-box {
+  width: 100%; /* Adjust the width for two input fields in a row */
+  margin-bottom: 15px; /* Add some space between input boxes */
+}
+
+.input-box1 {
+  width: 48%; /* Adjust the width for two input fields in a row */
+  margin-bottom: 15px; /* Add some space between input boxes */
+}
+
+.input-box2 {
+  width: 48%; /* Adjust the width for two input fields in a row */
+  margin-left: 310px; /* Add some space between input boxes */
+  margin-top: -95px; /* Add some space between input boxes */
+}
+
+.field .item {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid #136581;
+  outline: none;
+  border-radius: 6px;
+  font-size: 16px;
+  color: black;
+  box-sizing: border-box;
+}
+
+.field .item::placeholder {
+  color: rgba(19, 102, 129, 0.584);
+}
+
+.field .error-text {
+  font-size: 14.5px;
+  color: red;
+  text-align: left;
+  margin: 1px 0 10px;
+}
+
+/* Additional styling for better responsiveness */
+@media (max-width: 600px) {
+  .input-box {
+    width: 100%; /* Adjust width for smaller screens, stacking input boxes */
+  }
+}
+
+form .textarea-field .item {
+  width: 100%;
+  resize: none;
+}
+
+form .textarea-field .error-txt {
+  margin-top: -10px;
+}
+
+form button {
+  padding: 12px 32px;
+  background: #136581;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #136581;
+  font-size: 16px;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px; /* Adjust margin for spacing */
+}
+
+form button:hover {
+  box-shadow: none;
+}
