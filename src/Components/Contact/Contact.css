@@ -14,22 +14,28 @@ body {
 }
 
 .contact {
-  text-align: center; /* Center text in the contact container */
+  text-align: center;
 }
 
 .contact h2 {
   font-size: 40px;
   color: #136581;
   font-weight: bolder;
+  margin-top: 90px;
   margin-bottom: 10px;
 }
 
 .contact form {
-  width: 80%; /* Adjust the form width as a percentage */
-  max-width: 600px; /* Add a maximum width for larger screens */
-  margin: 20px auto; /* Center the form on the page */
-  display: flex; /* Make the form a flex container */
-  flex-direction: column; /* Stack items vertically */
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Show error-text if the corresponding input is empty */
+.contact .input-field.field.empty .error-text {
+  display: block;
 }
 
 .form-container {
@@ -39,24 +45,37 @@ body {
 
 .form-container > .input-box:nth-child(1),
 .form-container > .input-box:nth-child(2) {
-  /* Target the first two input boxes */
-  margin-bottom: 0; /* Remove bottom margin for inline arrangement */
+  margin-bottom: 0;
 }
 
 .input-box {
-  width: 100%; /* Adjust the width for two input fields in a row */
-  margin-bottom: 15px; /* Add some space between input boxes */
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .input-box1 {
-  width: 48%; /* Adjust the width for two input fields in a row */
-  margin-bottom: 15px; /* Add some space between input boxes */
+  width: 48%;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .input-box2 {
-  width: 48%; /* Adjust the width for two input fields in a row */
-  margin-left: 310px; /* Add some space between input boxes */
-  margin-top: -95px; /* Add some space between input boxes */
+  width: 48%;
+  margin-left: 310px;
+  margin-top: -63px;
+  margin-bottom: 15px;
+}
+.input-box3 {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.input-box4 {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.input-box5 {
+  width: 100%;
+  resize: ;
 }
 
 .field .item {
@@ -80,6 +99,7 @@ body {
   color: red;
   text-align: left;
   margin: 1px 0 10px;
+  display: none;
 }
 
 /* Additional styling for better responsiveness */
@@ -94,7 +114,7 @@ form .textarea-field .item {
   resize: none;
 }
 
-form .textarea-field .error-txt {
+form .textarea-field .error-text {
   margin-top: -10px;
 }
 
@@ -113,5 +133,5 @@ form button {
 }
 
 form button:hover {
-  box-shadow: none;
+  box-shadow: 0 0 10px#136581;
 }

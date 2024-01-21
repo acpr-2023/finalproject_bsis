@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
   const sendEmail = () => {
-    const fullName = document.getElementById("name").value;
-    const emailAddress = document.getElementById("email").value;
-    const phoneNumber = document.getElementById("phone").value;
-    const subject = document.getElementById("subject").value;
-    const message = document.getElementById("message").value;
+    const { name, email, phone, subject, message } = formValues;
 
     const emailData = {
       Host: "smtp.elasticemail.com",
@@ -16,7 +20,7 @@ const Contact = () => {
       To: "taracaguiat456@gmail.com",
       From: "taracaguiat456@gmail.com",
       Subject: subject,
-      Body: `Full Name: ${fullName}\n\nEmail Address: ${emailAddress}\n\nPhone Number: ${phoneNumber}\n\nMessage: ${message}`,
+      Body: `Full Name: ${name}\n\nEmail Address: ${email}\n\nPhone Number: ${phone}\n\nMessage: ${message}`,
     };
 
     window.Email.send(emailData).then((message) => alert(message));
@@ -24,8 +28,20 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Check if any field is empty before submitting
+    if (Object.values(formValues).some((value) => value.trim() === "")) {
+      alert("Please fill in all fields");
+      return;
+    }
+
     sendEmail();
     e.target.reset();
+  };
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormValues({ ...formValues, [id]: value });
   };
 
   return (
@@ -35,68 +51,86 @@ const Contact = () => {
       </h2>
       <form onSubmit={handleSubmit}>
         <div className="input-box1">
-          <div className="input-field field">
+          <div
+            className={`input-field field ${
+              formValues.name.trim() === "" ? "empty" : ""
+            }`}
+          >
             <input
               type="text"
               placeholder="Full Name"
               id="name"
               className="item"
               autoComplete="off"
+              onChange={handleChange}
             />
-            <div className="error-text">Full Name can't be blank</div>
           </div>
         </div>
-
         <div className="input-box2">
-          <div className="input-field field">
+          <div
+            className={`input-field field ${
+              formValues.email.trim() === "" ? "empty" : ""
+            }`}
+          >
             <input
               type="text"
               placeholder="Email Address"
               id="email"
               className="item"
               autoComplete="off"
+              onChange={handleChange}
             />
-            <div className="error-text">Email can't be blank</div>
           </div>
         </div>
 
-        <div className="input-box">
-          <div className="input-field field">
+        <div className="input-box3">
+          <div
+            className={`input-field field ${
+              formValues.phone.trim() === "" ? "empty" : ""
+            }`}
+          >
             <input
               type="text"
               placeholder="Phone Number"
               id="phone"
               className="item"
               autoComplete="off"
+              onChange={handleChange}
             />
-            <div className="error-text">Phone Number can't be blank</div>
           </div>
         </div>
 
-        <div className="input-box">
-          <div className="input-field field">
+        <div className="input-box4">
+          <div
+            className={`input-field field ${
+              formValues.subject.trim() === "" ? "empty" : ""
+            }`}
+          >
             <input
               type="text"
               placeholder="Subject"
               id="subject"
               className="item"
               autoComplete="off"
+              onChange={handleChange}
             />
-            <div className="error-text">Subject can't be blank</div>
           </div>
         </div>
-
-        <div className="textarea field field">
-          <textarea
-            name=""
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Your Message"
-            className="item"
-            autoComplete="off"
-          ></textarea>
-          <div className="error-text">Message can't be blank</div>
+        <div className="input-box5">
+          <div
+            className={`input-field field ${
+              formValues.message.trim() === "" ? "empty" : ""
+            }`}
+          >
+            <textarea
+              type="text"
+              placeholder="Message"
+              id="message"
+              className="item"
+              autoComplete="off"
+              onChange={handleChange}
+            />
+          </div>
         </div>
 
         <button type="submit">Send Message</button>
