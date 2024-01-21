@@ -62,7 +62,6 @@ const TrainingInquire = () => {
       role="main"
       tabIndex="-1"
     >
-
       <section>
         <h2 className="rich-text__heading" ref={typedTarget}>
           {/* Typed.js will insert text here */}
