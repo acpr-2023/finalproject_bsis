@@ -30,7 +30,17 @@ function App() {
             path="/trainings"
             element={<ShopCategory category="trainings" />}
           />
-          <Route path="/about" element={<ShopCategory category="about" />} />
+          <Route
+            path="/about"
+            element={
+              <React.Fragment>
+                <ShopCategory category="about" />
+                <About />
+                <Timeline />
+                <Contact />
+              </React.Fragment>
+            }
+          />
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
