@@ -102,14 +102,14 @@ const CartItems = () => {
           <div className="checkout-field">
             <label htmlFor="email">Contact Number:</label>
             <input
-              type="email"
-              id="email"
+              type="number"
+              id="number"
               placeholder="Enter your phone number"
             />
           </div>
           <div className="checkout-field">
             <label htmlFor="email">Address:</label>
-            <input type="email" id="email" placeholder="Enter your address" />
+            <input type="text" id="address" placeholder="Enter your address" />
           </div>
           <button type="submit">Place Order</button>
         </form>
