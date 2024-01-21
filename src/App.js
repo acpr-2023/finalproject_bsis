@@ -21,10 +21,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />
-
           <Route
             path="/services"
-            element={<ShopCategory category="services" />}
+            element={<ServiceDisplay category="services" />}
           />
           <Route
             path="/products"
@@ -41,10 +40,20 @@ function App() {
               </React.Fragment>
             }
           />
-      
-          <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
 
-
+          <Route
+            path="/services"
+            element={<ServiceDisplay category="services" />}
+          />
+          <Route
+            path="/products"
+            element={<ShopCategory category="products" />}
+          />
+          <Route
+            path="/trainings"
+            element={<ShopCategory category="trainings" />}
+          />
+          <Route path="/about" element={<ShopCategory category="about" />} />
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
@@ -55,6 +64,5 @@ function App() {
       </BrowserRouter>
     </div>
   );
-};
-
+}
 export default App;
