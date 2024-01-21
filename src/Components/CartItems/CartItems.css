@@ -1,4 +1,5 @@
 .cartitems {
+  position: relative;
   margin: 100px 170px;
 }
 
@@ -110,28 +111,71 @@
 }
 
 .checkout-form {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(174, 255, 0); /* Semi-transparent backdrop */
-  z-index: 999; /* Ensure it's above other elements */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  height: 80%;
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
+}
+
+.checkout-field input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.checkout-field label {
+  margin-right: 10px; /* Add space between label and input */
+}
+
+.checkout-field input {
+  /* Add any additional styling for your inputs */
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .order-confirmation-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure the modal is above other elements */
+}
+
+/* Add this style to dim the background when the checkout form or modal is open */
+.cartitems::after {
+  content: "";
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
-  color: black;
-  background-color: rgb(175, 255, 1); /* Semi-transparent backdrop */
-  z-index: 999; /* Ensure it's above other elements */
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Center horizontally */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Ensure the overlay is behind the form or modal */
+  display: none;
+}
+
+.show-checkout-form .cartitems::after,
+.show-confirmation .cartitems::after {
+  display: block;
 }

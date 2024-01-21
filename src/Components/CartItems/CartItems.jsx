@@ -99,7 +99,18 @@ const CartItems = () => {
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" placeholder="Enter your email" />
           </div>
-          {/* Add more fields as needed */}
+          <div className="checkout-field">
+            <label htmlFor="email">Contact Number:</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div className="checkout-field">
+            <label htmlFor="email">Address:</label>
+            <input type="email" id="email" placeholder="Enter your address" />
+          </div>
           <button type="submit">Place Order</button>
         </form>
       )}
@@ -109,7 +120,8 @@ const CartItems = () => {
           <h2>Order Confirmed!</h2>
           <p>
             Thank you for your order! Your confirmation details have been sent
-            to your email.
+            to your email. Please be reminded that your booking is subject to
+            confirmation by our Client Management Team.
           </p>
           <button onClick={() => setShowConfirmation(false)}>Close</button>
         </div>
