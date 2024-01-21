@@ -47,13 +47,26 @@ function App() {
             }
           />
 
+
+<Route
+            path="/services"
+            element={<ServiceDisplay category="services" />}
+          />
+          <Route
+            path="/products"
+            element={<ShopCategory category="products" />}
+          />
+          <Route
+            path="/trainings"
+            element={<ShopCategory category="trainings" />}
+          />
+
           <Route path="/services" element={<ServiceDisplay category="services" />} />
           <Route path="/products" element={<ShopCategory category="products" />} />
       
           <Route path="/trainings" element={<><ShopCategory category="trainings" /><TrainingInquire /></>} />
 
           <Route path="/about" element={<ShopCategory category="about" />} />
-          
 
           <Route path="/product" element={<Product />}>
             <Route path=":productId" element={<Product />} />
