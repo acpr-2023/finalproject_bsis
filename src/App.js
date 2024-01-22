@@ -11,11 +11,13 @@ import About from "./Components/About/About";
 import Timeline from "./Components/About/Timeline";
 import Contact from "./Components/Contact/Contact";
 import TrainingInquire from "./Components/TrainingInquire/TrainingInquire";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Shop />} />

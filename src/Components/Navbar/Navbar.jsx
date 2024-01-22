@@ -1,79 +1,60 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../Assets/logo.png";
 import cart_icon from "../Assets/cart_icon.png";
-import { Link } from "react-router-dom";
 import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("shop");
   const { getTotalCartItems } = useContext(ShopContext);
+  const location = useLocation();
+
+  // Function to check if the path is active
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <div className="navbar">
       <div className="nav-logo">
-        <img src={logo} alt="" />
+        <img src={logo} alt="logo" />
         <p>Cleaning Fairies</p>
       </div>
       <ul className="nav-menu">
-        <li
-          onClick={() => {
-            setMenu("shop");
-          }}
-        >
+        <li>
           <Link style={{ textDecoration: "none" }} to="/">
             Home
           </Link>
-          {menu === "shop" ? <hr /> : <></>}
+          {isActive('/') ? <hr /> : null}
         </li>
-
-        <li
-          onClick={() => {
-            setMenu("services");
-          }}
-        >
+        <li>
           <Link style={{ textDecoration: "none" }} to="/services">
             Our Services
           </Link>
-          {menu === "services" ? <hr /> : <></>}
+          {isActive('/services') ? <hr /> : null}
         </li>
-
-        <li
-          onClick={() => {
-            setMenu("products");
-          }}
-        >
+        <li>
           <Link style={{ textDecoration: "none" }} to="/products">
             Products
           </Link>
-          {menu === "products" ? <hr /> : <></>}
+          {isActive('/products') ? <hr /> : null}
         </li>
-
-        <li
-          onClick={() => {
-            setMenu("trainings");
-          }}
-        >
+        <li>
           <Link style={{ textDecoration: "none" }} to="/trainings">
             Trainings
           </Link>
-          {menu === "trainings" ? <hr /> : <></>}
+          {isActive('/trainings') ? <hr /> : null}
         </li>
-
-        <li
-          onClick={() => {
-            setMenu("about");
-          }}
-        >
+        <li>
           <Link style={{ textDecoration: "none" }} to="/about">
             About Us
           </Link>
-          {menu === "about" ? <hr /> : <></>}
+          {isActive('/about') ? <hr /> : null}
         </li>
       </ul>
       <div className="nav-login-cart">
         <Link to="/cart">
-          <img src={cart_icon} alt="" />
+          <img src={cart_icon} alt="cart icon" />
         </Link>
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
