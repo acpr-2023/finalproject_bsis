@@ -1,19 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./CSS/ShopCategory.css";
 import { ShopContext } from "../Context/ShopContext";
 import Item from "../Components/Item/Item";
 
 const ShopCategory = (props) => {
   const { all_product, addToCart } = useContext(ShopContext);
-  const [selectedItemId, setSelectedItemId] = useState(null);
-
-  const handleItemClick = (itemId) => {
-    setSelectedItemId(itemId);
-  };
 
   const handleAddToCart = (itemId) => {
     addToCart(itemId);
-    setSelectedItemId(null);
   };
 
   return (
@@ -28,7 +22,6 @@ const ShopCategory = (props) => {
                   name={item.name}
                   image={item.image}
                   new_price={item.new_price}
-                  setSelectedItemId={handleItemClick}
                 />
                 <button
                   onClick={() => handleAddToCart(item.id)}
