@@ -9,7 +9,7 @@ const About = () => {
     <div className="about">
       <div className="abt-desc">
         <h2>Our Journey</h2>
-        <img src={grpphoto} alt="Cleaning Fairies Team Group Photo" />
+        <img src={grpphoto} alt="Cleaning Fairies Team Group" />
         <p>
           The Cleaning Fairies is here to transform your home maintenance
           experience, making it efficient and stress-free!
