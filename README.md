@@ -1,3 +1,15 @@
+# Project Description
+
+Welcome to Cleaning Fairies! a one-stop destination for a pristine living environment! Cleaning Fairies is an innovative e-commerce platform dedicated to providing comprehensive cleaning solutions. Experience the convenience of a cleaner, healthier lifestyle with us. Whether you're looking for professional cleaning services, premium cleaning products, or expert training, we've got you covered. Live cleaner, live comfortable!
+
+## Contributions
+
+**Andal** - Trainings, Media Queries\
+**Balatero** - Home, Add to Cart\
+**Caguiat** - About Us, Contact Form\
+**Enriquez** - Cleaning Products, Checkout Form\
+**Recaña** - Services, Book Now Feature
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
